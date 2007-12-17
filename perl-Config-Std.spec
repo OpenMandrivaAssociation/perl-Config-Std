@@ -13,7 +13,6 @@ Url:                http://search.cpan.org/dist/%{module}/
 Source:             http://www.cpan.org/modules/by-module/Text/%{module}-%{version}.tar.bz2
 BuildRequires:      perl perl-Module-Build
 Requires:           perl(Class::Std)
-BuildRoot:          %{_tmppath}/%{name}-%{version}
 BuildArch:          noarch
 
 %description
