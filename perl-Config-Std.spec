@@ -1,26 +1,25 @@
-%define module  Config-Std
-%define name    perl-%{module}
-%define release %mkrel 1
-%define version v0.0.4
+%define upstream_name    Config-Std
+%define upstream_version 0.007
 
-Name:               %{name}
-Version:            %{version}
-Release:            %{release}
-Summary:            Load and save configuration files in a standard format 
-License:            GPL or Artistic
-Group:              Development/Perl
-Url:                http://search.cpan.org/dist/%{module}/
-Source:             http://www.cpan.org/modules/by-module/Text/%{module}-%{version}.tar.bz2
-BuildRequires:      perl perl-Module-Build
+Name:       perl-%{upstream_name}
+Version:    %perl_convert_version %{upstream_version}
+Release:    %mkrel 1
+Summary:    Load and save configuration files in a standard format 
+License:    GPL or Artistic
+Group:      Development/Perl
+Url:		http://search.cpan.org/dist/%{upstream_name}
+Source0:    http://www.cpan.org/modules/by-module/Config/%{upstream_name}-%{upstream_version}.tar.gz
+BuildRequires:      perl(Module::Build)
+BuildRequires:      perl(Class::Std)
 Requires:           perl(Class::Std)
-BuildRoot:          %{_tmppath}/%{name}-%{version}
 BuildArch:          noarch
+BuildRoot:          %{_tmppath}/%{name}-%{version}
 
 %description
 Load and save configuration files in a standard format 
 
 %prep
-%setup -q -n %{module}-%{version}
+%setup -q -n %{upstream_name}-%{upstream_version}
 
 %build
 # only when building from CVS (version 1.51-3mdk)
