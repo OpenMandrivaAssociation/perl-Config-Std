@@ -44,3 +44,27 @@ rm -rf %{buildroot}
 %doc Changes README
 %{perl_vendorlib}/Config/Std*
 %{_mandir}/*/*
+
+
+%changelog
+* Sat May 28 2011 Funda Wang <fwang@mandriva.org> 0.7.0-2mdv2011.0
++ Revision: 680844
+- mass rebuild
+
+* Mon Dec 07 2009 Guillaume Rousse <guillomovitch@mandriva.org> 0.7.0-1mdv2011.0
++ Revision: 474569
+- new version
+
+  + Olivier Blin <oblin@mandriva.com>
+    - restore BuildRoot
+
+  + Thierry Vignaud <tv@mandriva.org>
+    - kill re-definition of %%buildroot on Pixel's request
+
+  + Per Øyvind Karlsen <peroyvind@mandriva.org>
+    - Import perl-Config-Std
+
+
+
+* Tue May 22 2007 Shlomi Fish <shlomif@iglu.org.il> v0.0.4-1mdv2007.1
+- Initial release.
