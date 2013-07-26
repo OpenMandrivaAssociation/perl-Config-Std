@@ -1,14 +1,14 @@
 %define upstream_name    Config-Std
-%define upstream_version 0.007
+%define upstream_version 0.900
 
 Name:       perl-%{upstream_name}
-Version:    %perl_convert_version %{upstream_version}
-Release:    %mkrel 2
+Version:    %perl_convert_version 0.900
+Release:    1
 Summary:    Load and save configuration files in a standard format 
 License:    GPL or Artistic
 Group:      Development/Perl
 Url:		http://search.cpan.org/dist/%{upstream_name}
-Source0:    http://www.cpan.org/modules/by-module/Config/%{upstream_name}-%{upstream_version}.tar.gz
+Source0:    http://www.cpan.org/modules/by-module/Config/Config-Std-0.900.tar.gz
 BuildRequires:      perl(Module::Build)
 BuildRequires:      perl(Class::Std)
 Requires:           perl(Class::Std)
@@ -68,3 +68,4 @@ rm -rf %{buildroot}
 
 * Tue May 22 2007 Shlomi Fish <shlomif@iglu.org.il> v0.0.4-1mdv2007.1
 - Initial release.
+
